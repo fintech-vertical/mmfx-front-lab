@@ -7,8 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "format": "prettier --write --ignore-unknown src",
     "commit": "git cz",
-    "release": "release-it"
+    "release": "release-it",
+    "typechecks": "pnpm tsc --noEmit"
   },
   "dependencies": {
     "next": "13.3.0",
@@ -28,6 +30,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
     "postcss": "8.4.23",
     "release-it": "^15.10.1",
     "tailwindcss": "3.3.1",

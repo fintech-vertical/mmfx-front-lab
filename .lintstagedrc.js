@@ -1,14 +1,13 @@
+const path = require('path')
+
+const buildEslintCommand = filenames =>
+  `next lint --fix --file ${filenames.map(f => path.relative(process.cwd(), f)).join(' --file ')}`
+
+const buildPrettierCommand = filenames =>
+  `pnpm prettier --write ${filenames.map(f => path.relative(process.cwd(), f)).join(' --file ')}`
+
 module.exports = {
-  '**/*.(ts|tsx)': () => 'pnpm tsc --noEmit',
-  '**/*.(ts|tsx|js)': filenames => [
-    `pnpm eslint ${filenames.join(' ')}`,
-    `next lint --fix --file ${filenames
-      .map((f) => path.relative(process.cwd(), f))
-      .join(' --file ')}`,
-    `pnpm prettier --write ${filenames.join(' ')}`
-  ],
-  '**/*.s(c|a)ss': filenames => [
-    `pnpm prettier --write ${filenames.join(' ')}`
-  ],
-  '**/*.(md|json)': filenames => `pnpm prettier --write ${filenames.join(' ')}`
-};
+  '*.{js,jsx,ts,tsx}': [buildEslintCommand, buildPrettierCommand],
+  '**/*.s(c|a)ss': [buildPrettierCommand],
+  '**/*.(md|json)': [buildPrettierCommand],
+}
