@@ -7,7 +7,7 @@
   },
   "github": {
     "release": true,
-    "autoGenerate": true,
-    "web": true
+    "releaseName": "v${version}",
+    "tokenRef": "RELEASE_IT_TOKEN"
   }
 }
