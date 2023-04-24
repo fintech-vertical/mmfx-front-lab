@@ -7,7 +7,7 @@
   },
   "github": {
     "release": true,
-    "releaseName": "v${version}",
+    "releaseName": "Release 💎: v${version}",
     "tokenRef": "RELEASE_IT_TOKEN"
   }
 }
