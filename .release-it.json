@@ -3,10 +3,12 @@
     "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
   },
   "hooks": {
-    "after:bump": "git add .; git commit --amend --no-edit; npx auto-changelog -p; git add CHANGELOG.md; git commit --amend --no-edit",
+    "after:bump": "git add .; git commit --amend --no-edit; npx auto-changelog -p; git add CHANGELOG.md; git commit --amend --no-edit; git push origin +main",
     "after:git:release": "git push origin HEAD"
   },
   "github": {
-    "release": true
+    "release": true,
+    "autoGenerate": true,
+    "web": true
   }
 }
