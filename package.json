@@ -11,7 +11,7 @@
     "commit": "git cz",
     "release": "dotenv release-it --dry-run",
     "typechecks": "pnpm tsc --noEmit",
-    "postversion": "git add . && git commit --amend -no-edit"
+    "postversion": "git add . && git commit --amend --no-edit"
   },
   "dependencies": {
     "next": "13.3.0",
