@@ -16,8 +16,8 @@ Link das tarefas no Jira, caso existir:
 - [ ] Test (adição/edição de testes unitários ou 2e2)
 - [ ] Improvement (adiciona melhorias à um recurso já existente)
 - [ ] Refactor (uma mudança na aplicação que não modifica seu comportamento original, porém adiciona melhorias arquiteturais,performance, etc.)
-- [ ] Chore (build process or auxiliary tool changes)
-- [ ] Documentation (documentation only changes)
+- [ ] Chore (mudanças em processos de build e ferramentas auxiliares)
+- [ ] Documentation (mudanças somente de documentação)
 
 ## :warning::rotating_light: **Lista de verificação**
 
