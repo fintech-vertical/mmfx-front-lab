@@ -1,16 +1,16 @@
 {
   "git": {
     "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs",
-    "commitMessage": "release 💎: v${version}",
+    "commitMessage": "release: 💎 v${version}",
     "tagName": "v${version}",
-    "tagAnnotation": "Release v${version}"
+    "tagAnnotation": "Release 💎 v${version}"
   },
   "hooks": {
     "after:bump": "npx auto-changelog -p; git add CHANGELOG.md; git commit --amend --no-edit; git push origin +main"
   },
   "github": {
     "release": true,
-    "releaseName": "Release 💎: v${version}",
+    "releaseName": "Release 💎 v${version}",
     "tokenRef": "RELEASE_IT_TOKEN"
   }
 }
