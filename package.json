@@ -9,7 +9,7 @@
     "lint": "next lint",
     "format": "prettier --write --ignore-unknown src",
     "commit": "git cz",
-    "release": "release-it",
+    "release": "dotenv release-it --dry-run",
     "typechecks": "pnpm tsc --noEmit",
     "postversion": "pnpm release"
   },
@@ -26,6 +26,7 @@
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "cz-git": "^1.6.1",
+    "dotenv-cli": "^7.2.1",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "eslint-config-prettier": "^8.8.0",
