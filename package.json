@@ -10,7 +10,8 @@
     "format": "prettier --write --ignore-unknown src",
     "commit": "git cz",
     "release": "release-it",
-    "typechecks": "pnpm tsc --noEmit"
+    "typechecks": "pnpm tsc --noEmit",
+    "postversion": "pnpm release"
   },
   "dependencies": {
     "next": "13.3.0",
